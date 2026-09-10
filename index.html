@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>123.viajei.com - Login</title>
+    <style>
+        /* Configurações Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Imagem de fundo de praia remetendo ao tema de turismo do grupo */
+            background: url('https://unsplash.com') no-repeat center center/cover;
+            padding: 20px;
+        }
+
+        /* Card de Login baseado no Figma */
+        .login-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+        }
+
+        /* Logo e Cabeçalho */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #2563eb; /* Azul institucional */
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .logo-icon {
+            background: #2563eb;
+            color: white;
+            padding: 6px 10px;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+
+        h2 {
+            color: #1f2937;
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        p.subtitle {
+            color: #6b7280;
+            font-size: 14px;
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+
+        /* Formulário */
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            color: #374151;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 14px;
+            background-color: #f9fafb;
+            transition: all 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #2563eb;
+            background-color: #fff;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        .forgot-password {
+            display: block;
+            text-align: right;
+            color: #2563eb;
+            font-size: 12px;
+            text-decoration: none;
+            margin-top: 5px;
+        }
+
+        /* Botão Entrar */
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            background: #1d4ed8;
+        }
+
+        /* Divisor e Rodapé do Card */
+        .divider {
+            margin: 25px 0;
+            color: #9ca3af;
+            font-size: 12px;
+            position: relative;
+        }
+
+        .footer-text {
+            color: #4b5563;
+            font-size: 14px;
+        }
+
+        .footer-text a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-card">
+        <!-- Cabeçalho do Card -->
+        <div class="logo-container">
+            <span class="logo-icon">✈</span>
+            <span>123.viajei.com</span>
+        </div>
+        <h2>Bem-vindo de volta!</h2>
+        <p class="subtitle">Entre na sua conta e comece a planejar sua próxima aventura</p>
+
+        <!-- Formulário de Login -->
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="seuemail@email.com" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+                <a href="#" class="forgot-password">Esqueceu a senha?</a>
+            </div>
+
+            <button type="submit" class="btn-submit">Entrar</button>
+        </form>
+
+        <div class="divider">OU</div>
+
+        <p class="footer-text">Primeira viagem com a gente? <a href="#">Crie sua conta</a></p>
+    </div>
+
+    <!-- JavaScript para dar vida e simular o login do protótipo -->
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede a página de recarregar
+            
+            // Conforme o manual do seu PDF: aceita qualquer e-mail e senha!
+            alert('Login simulado com sucesso! Redirecionando para o Dashboard do 123.viajei.com...');
+            
+            // Aqui simula o redirecionamento. Quando você criar o dashboard.html, ele vai abrir automaticamente!
+            window.location.href = 'dashboard.html'; 
+        });
+    </script>
+
+</body>
+</html>
